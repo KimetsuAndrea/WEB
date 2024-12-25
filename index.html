@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.67" /> -->
+    <title>Lia-Web-OS</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/natives.css" />
+    <link rel="stylesheet" href="css/maybematerial.css" />
+    <link rel="stylesheet" href="tools/jqueryui.css" />
+    <link rel="stylesheet" href="css/flex.css" />
+    <link rel="stylesheet" href="css/win_wannabe.css" />
+    <link rel="stylesheet" href="css/atom-one-dark.min.css" />
+    <link rel="stylesheet" href="css/liaX.css" />
+    <!-- <link rel="stylesheet" href="css/mdl/material.min.css" /> -->
+  </head>
+  <body>
+    <script src="css/highlight.min.js"></script>
+    <script src="scripts/quill.js"></script>
+    <lia-screen class="loading">
+      <div class="desktopIcons">
+        <ul>
+          <!-- <li id="app-list">
+            <img src="css/icons/app-list.svg" alt="" title="App List"  />
+            <p>App List</p>
+          </li> -->
+        </ul>
+      </div>
+      <div class="desktop">
+        <!-- <p>Lia-OS V1</p> -->
+        <!-- <div class="windowApp">
+          <header style="background-color: #aabeff; color: black">
+            <img src="/css/icons/globe.png" alt="" class="icon" />
+            <h1>Example</h1>
+          </header>
+          <main>Contents here</main>
+        </div> -->
+      </div>
+      <div id="taskbarmenu" class="none">
+        <div
+          class="item"
+          onclick="localStorage.removeItem('taskBarIconsOrder'); location.reload()"
+        >
+          Reset Taskbar Order
+        </div>
+      </div>
+      <div class="taskBarWrap">
+        <div class="taskBar">
+          <ul>
+            <li>
+              <img src="css/icons/app-list.svg" alt="" title="App List" />
+            </li>
+
+            <!-- <li>
+              <img src="css/icons/chromeicon.svg" alt="" title="Chrome" />
+            </li>
+  
+            <li>
+              <img src="css/icons/photos.svg" alt="" title="Photos" />
+            </li>
+            <li>
+              <img src="css/icons/messenger.svg" alt="" title="Messenger" />
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </lia-screen>
+    <lia-loading>
+      <h6>Loading..</h6>
+    </lia-loading>
+
+    <lia-nomobile>
+      <div class="lia-card">
+        <h2>Moile View is not supported!</h2>
+        <h2>Please use a laptop or a PC.</h2>
+      </div>
+    </lia-nomobile>
+    <!-- <script src="css/mdl/material.min.js"></script> -->
+
+    <script src="tools/jqueryX.js"></script>
+    <script src="tools/jqueryui.js"></script>
+    <script src="scripts/start.js" type="module"></script>
+    <div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+      // eruda.init();
+      // eruda.destroy();
+      // erua.hide();
+      window.eruda = eruda;
+      window.hljs = hljs;
+    </script>
+    <!-- <script>
+      const quill = new Quill("#editor", {
+        modules: {
+          syntax: true, // Include syntax module
+          toolbar: [["code-block"]], // Include button in toolbar
+        },
+        theme: "snow",
+      });
+
+      const Delta = Quill.import("delta");
+      quill.setContents(
+        new Delta()
+          .insert('const language = "JavaScript";')
+          .insert("\n", { "code-block": "javascript" })
+          .insert('console.log("I love " + language + "!");')
+          .insert("\n", { "code-block": "javascript" })
+      );
+    </script> -->
+  </body>
+</html>

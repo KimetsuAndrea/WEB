@@ -1,0 +1,1044 @@
+/*
+  CSS Made by Liane Cagara
+  DO NOT OWN
+  Disclaimer: This is not based on fluent design system.
+  LIAURORA DESIGN SYSTEM
+*/
+
+:root {
+  --accent: rgb(204, 0, 255);
+}
+
+img {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.windowApp ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  /* border-radius: 10px; */
+  /* background-color: #f5f5f5; */
+  background-color: lightgrey;
+}
+
+.windowApp ::-webkit-scrollbar {
+  /* width: 12px; */
+  background-color: #f5f5f5;
+  width: 10px;
+  height: 10px;
+}
+
+.windowApp ::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+
+  background-color: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.windowApp ::-webkit-scrollbar-thumb:hover {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  background-color: #d8d8d8;
+}
+
+/* Common Stuffs that need styles */
+
+.lia-button {
+  all: unset;
+  display: inline-block;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+  /* background-color: black; */
+  backdrop-filter: blur(100px);
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  transition: all 0.1s ease-out;
+}
+
+.lia-input[type="text"] {
+  all: unset;
+  display: inline-block;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.3);
+  /* background-color: black; */
+  backdrop-filter: blur(100px);
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  border-left: 4px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-out;
+}
+
+.lia-input[type="text"]:focus {
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.lia-button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.lia-button:active:not(.lia-button.noscale) {
+  scale: 0.95;
+}
+
+.lia-button.noscale:active {
+  filter: brightness(0.7) !important;
+}
+
+.lia-button:hover {
+  filter: brightness(0.9);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.lia-container {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(100px);
+  padding: 10px;
+  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.ctxmenu {
+  background: rgba(196, 196, 196, 0.685);
+  backdrop-filter: blur(100px);
+  /* padding: 5px; */
+  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  min-width: 200px;
+  /* min-height: 400px; */
+  height: max-content;
+  overflow: auto;
+  animation: openApp 0.2s ease-out forwards;
+  font-size: 14px;
+}
+
+.lia-padding {
+  padding: 10px;
+  margin: 2px;
+  display: block;
+  border-radius: 10px;
+}
+
+.none {
+  display: none;
+}
+
+.ctxmenu .item {
+  display: block;
+  /* border-radius: 13px; */
+  padding: 10px;
+  background-color: transparent;
+  color: black;
+  transition: all 0.2s ease-out;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+
+  /* margin-bottom: 2px; */
+}
+
+.ctxmenu .item:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.ctxmenu .item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  /* border-color: transparent; */
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); */
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.off {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.lia-select {
+  all: unset;
+  display: inline-block;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(100px);
+  padding: 5px 10px;
+  margin: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  border-left: 4px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-out;
+  appearance: none;
+}
+
+.lia-select:focus {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.lia-input:hover:not(.lia-input:focus) {
+  filter: brightness(0.9);
+}
+
+.lia-select:hover:not(.lia-select:focus) {
+  filter: brightness(0.9);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.lia-textbox {
+  all: unset;
+  display: inline-block;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(100px);
+  padding: 5px 10px;
+  margin: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  border-left: 4px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-out;
+}
+
+.lia-textbox:focus {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.lia-textbox:hover {
+  filter: brightness(0.9);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.lia-container-highlight {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(150px);
+  padding: 15px;
+  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.lia-input[type="password"],
+.lia-input[type="email"],
+.lia-input[type="number"],
+.lia-input[type="date"],
+.lia-input[type="checkbox"],
+.lia-input[type="radio"],
+.lia-input[type="file"] {
+  all: unset;
+  display: inline-block;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(100px);
+  padding: 5px 10px;
+  margin: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  border-left: 4px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-out;
+}
+
+.lia-input[type="password"]:focus,
+.lia-input[type="email"]:focus,
+.lia-input[type="number"]:focus,
+.lia-input[type="date"]:focus,
+.lia-input[type="checkbox"]:focus,
+.lia-input[type="radio"]:focus,
+.lia-input[type="file"]:focus {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.lia-input[type="checkbox"],
+.lia-input[type="radio"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.lia-input[type="file"] {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.lia-input[type="checkbox"]:checked,
+.lia-input[type="radio"]:checked {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.lia-input[type="checkbox"]:hover,
+.lia-input[type="radio"]:hover,
+.lia-input[type="file"]:hover {
+  filter: brightness(0.9);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.lia-button.blue {
+  background-color: #007bffdc;
+  /* border-color: #0056b3; */
+  color: white;
+}
+
+.lia-button.blue:hover {
+  background-color: #0057b3fb;
+  border-color: #003d80;
+  color: white;
+}
+
+.lia-button.green {
+  background-color: #28a746d8;
+  /* border-color: #1c7430; */
+  color: white;
+}
+
+.lia-button.green:hover {
+  background-color: #1c7430;
+  border-color: #145321;
+  color: white;
+}
+
+.lia-button.red {
+  background-color: #dc3546dc;
+  /* border-color: #a71d2a; */
+  color: white;
+}
+
+.lia-button.red:hover {
+  background-color: #a71d2a;
+  border-color: #6c1320;
+  color: white;
+}
+
+.lia-button.yellow {
+  background-color: #ffc107d7;
+  /* border-color: #e0a800; */
+  color: black;
+}
+
+.lia-button.yellow:hover {
+  background-color: #e0a800;
+  border-color: #b08900;
+  color: black;
+}
+
+.lia-button.purple {
+  background-color: #6e42c1e1;
+  /* border-color: #532d91; */
+  color: white;
+}
+
+.lia-button.purple:hover {
+  background-color: #532d91;
+  border-color: #3a1f66;
+  color: white;
+}
+
+/* Additional tags for LIAURORA DESIGN SYSTEM */
+
+/* Lia Header */
+.lia-header {
+  all: unset;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.lia-header.clean {
+  background-color: transparent;
+  color: black;
+  box-shadow: none;
+  /* padding: 0; */
+}
+
+.lia-header h1,
+.lia-header h2,
+.lia-header h2,
+.lia-header h3,
+.lia-header h4,
+.lia-header h5,
+.lia-header h6 {
+  margin: 0;
+}
+
+/* Lia Footer */
+.lia-footer {
+  all: unset;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Lia Modal */
+.lia-modal {
+  all: unset;
+  display: block;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lia-modal-header {
+  all: unset;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.lia-modal-body {
+  all: unset;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.lia-modal-footer {
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.lia-modal-close {
+  all: unset;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: all 0.1s ease-out;
+}
+
+.lia-modal-close:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Lia Card */
+.lia-card {
+  all: unset;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(100px);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lia-card.clean {
+  background-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.lia-card-title {
+  all: unset;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.lia-card-body {
+  all: unset;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.lia-card-footer {
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.lia-card-footer .lia-button {
+  all: unset;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+/* Lia Alert */
+.lia-alert {
+  all: unset;
+  display: inline-block;
+  background-color: rgba(255, 99, 71, 0.5);
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.lia-alert-success {
+  background-color: rgba(40, 167, 69, 0.5);
+}
+
+.lia-alert-info {
+  background-color: rgba(23, 162, 184, 0.5);
+}
+
+.lia-alert-warning {
+  background-color: rgba(255, 193, 7, 0.5);
+}
+
+.lia-alert-danger {
+  background-color: rgba(220, 53, 69, 0.5);
+}
+
+/* Lia Tooltip */
+.lia-tooltip {
+  all: unset;
+  position: relative;
+  cursor: pointer;
+}
+
+.lia-tooltip .tooltip-text {
+  all: unset;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lia-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Lia Table */
+.lia-table {
+  all: unset;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lia-table th,
+.lia-table td {
+  all: unset;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.lia-table th {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.lia-table td:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Lia Badge */
+.lia-badge {
+  all: unset;
+  display: inline-block;
+  background-color: rgba(0, 123, 255, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.lia-badge-info {
+  background-color: rgba(23, 162, 184, 0.5);
+}
+
+.lia-badge-success {
+  background-color: rgba(40, 167, 69, 0.5);
+}
+
+.lia-badge-warning {
+  background-color: rgba(255, 193, 7, 0.5);
+}
+
+.lia-badge-danger {
+  background-color: rgba(220, 53, 69, 0.5);
+}
+
+/* Layout for multiple cards in a grid */
+.lia-cardgrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Flexible columns */
+  gap: 20px;
+  padding: 10px;
+}
+
+.lia-cardgrid .lia-card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(100px);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.lia-cardgrid .lia-card:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Split two containers side by side */
+.lia-splitcards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.lia-splitcards .lia-left,
+.lia-splitcards .lia-right {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(100px);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.lia-splitcards .lia-left:hover,
+.lia-splitcards .lia-right:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* For mobile or smaller screens, stack the split cards vertically */
+@media screen and (max-width: 768px) {
+  .lia-splitcards {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lia-splitcards .lia-left,
+  .lia-splitcards .lia-right {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* Card container that expands in full width (useful for full-width elements like banners) */
+.lia-fullwidth {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(120px);
+  padding: 30px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.lia-fullwidth:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Flexbox for responsive items in a row that wraps */
+.lia-flexwrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.lia-flexwrap > * {
+  flex: 1 1 300px; /* each item takes at least 300px */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(100px);
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.lia-flexwrap > *:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .lia-cardgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .lia-flexwrap > * {
+    flex: 1 1 100%;
+  }
+}
+
+.lia-bottom-opts {
+  display: flex;
+  /* position: fixed; */
+  /* height: 50px; */
+  justify-content: right;
+}
+
+.lia-bottom-opts.full * {
+  flex: 1;
+  height: max-content;
+}
+
+.nomargin {
+  margin: 0 !important;
+}
+
+.ql-snow.ql-toolbar button:hover,
+.ql-snow .ql-toolbar button:hover,
+.ql-snow.ql-toolbar button:focus,
+.ql-snow .ql-toolbar button:focus,
+.ql-snow.ql-toolbar button.ql-active,
+.ql-snow .ql-toolbar button.ql-active,
+.ql-snow.ql-toolbar .ql-picker-label:hover,
+.ql-snow .ql-toolbar .ql-picker-label:hover,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active,
+.ql-snow.ql-toolbar .ql-picker-item:hover,
+.ql-snow .ql-toolbar .ql-picker-item:hover,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+  /* color: var(--accent) !important; */
+  color: rgb(0, 0, 0) !important;
+}
+
+.ql-toolbar.ql-snow {
+  border: none !important;
+  font-family: "Product Sans" !important;
+  z-index: 39 !important;
+}
+
+.lia-menubar {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.15);
+  min-height: 40px;
+  position: fixed;
+  top: 30px;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 14px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 200;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  /* font-weight: bold; */
+}
+
+.lia-menubar.side {
+  top: 30px;
+  min-width: 40px;
+  width: 0;
+  height: 100%;
+  flex-direction: column;
+}
+
+.lia-menubar.small {
+  min-height: 35px;
+  padding: 4px;
+}
+
+.lia-menubar.small li {
+  padding: 0 8px !important;
+  /* margin: 4px 0; */
+  /* margin-top: 0; */
+  /* padding-top: 0; */
+  border-radius: 6px;
+}
+
+.lia-menubar.small li.active,
+.lia-menubar.small li:hover {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.lia-menubar:hover {
+  /* border-radius: 0px; */
+}
+
+.lia-menubar .content {
+  /* background: rgba(196, 196, 196, 1); */
+  background-color: white;
+  backdrop-filter: blur(100px);
+  /* padding: 5px; */
+  /* border-radius: 13px; */
+  padding: 10px;
+  /* margin-top: 10px; */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  /* border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px; */
+  border-radius: 8px;
+  min-width: 200px;
+  /* min-height: 400px; */
+  height: max-content;
+  overflow: auto;
+  animation: openApp 0.2s ease-out forwards;
+  font-size: 14px;
+  position: relative;
+  display: none;
+  user-select: none;
+}
+
+.lia-menubar .item {
+}
+
+.lia-menubar li {
+  flex: 0;
+  list-style-type: none;
+  padding: 10px 18px;
+  color: rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease-out;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-right: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+.lia-menubar li:hover {
+  background-color: rgba(216, 216, 216, 0.9);
+
+  border-bottom: 2px solid var(--accent);
+}
+
+.lia-menubar li:active,
+.lia-menubar li.active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(167, 167, 167, 0.85); */
+  background-color: white;
+  border-radius: 0px;
+  border-bottom: 4px solid var(--accent);
+  color: var(--accent);
+  padding-bottom: 8px;
+}
+
+.lia-menubar .item {
+  display: block;
+  /* border-radius: 13px; */
+  padding: 10px;
+  background-color: transparent;
+  color: black;
+  transition: all 0.1s ease-out;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  /* font-weight: bold; */
+
+  /* margin-bottom: 2px; */
+}
+
+.lia-menubar .item[disabled],
+.lia-menubar .item:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.lia-menubar .item:hover {
+  /* background-color: rgba(134, 134, 134, 0.3); */
+  color: var(--accent);
+  /* border-color: transparent; */
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); */
+}
+
+.lia-menubar .item:active {
+  scale: 0.95;
+  background-color: rgba(134, 134, 134, 0.3);
+}
+
+.lia-ctxmenu {
+  /* background-color: white; */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(50px);
+  /* backdrop-filter: blur(100px); */
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  min-width: 200px;
+  height: max-content;
+  overflow: auto;
+  animation: openApp 0.2s ease-out forwards;
+  font-size: 14px;
+  position: relative;
+  display: none;
+  user-select: none;
+}
+
+.lia-ctxmenu .item {
+  display: block;
+  /* border-radius: 13px; */
+  padding: 10px;
+  background-color: transparent;
+  color: black;
+  transition: all 0.1s ease-out;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.lia-ctxmenu .item:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.lia-ctxmenu .item:hover {
+  color: var(--accent);
+}
+
+.lia-ctxmenu .item:hover svg {
+  fill: var(--accent);
+}
+.modern-audio {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background: white; */
+  /* border-radius: 8px; */
+  padding: 10px;
+  width: 400px;
+  height: 100px;
+  gap: 20px;
+  color: black;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* position: absolute;
+  top: 20px;
+  right: 20px; */
+  /* z-index: 999999; */
+}
+
+.modern-audio .audio-name {
+  flex-grow: 1;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.modern-audio .audio-controls {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.modern-audio .audio-controls * {
+  flex: 1;
+}
+
+.modern-audio .audio-controls .play-pause-btn {
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.modern-audio .audio-controls .progress-slider {
+  width: 200px;
+  margin-right: 10px;
+}
+
+.modern-audio .audio-controls .timestamp {
+  font-size: 12px;
+}
+
+.modern-audio .audio-progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  height: 4px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.modern-audio .audio-progress-bar .audio-progress-bar-filled {
+  background-color: #00bcd4;
+  width: 0%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.ql-code-block-container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.lia-container:has(.ql-code-block-container) {
+  padding: 0;
+  overflow: auto;
+}
+
+.ql-editor:has(.ql-code-block-container) {
+  margin: 0;
+  padding: 0;
+}

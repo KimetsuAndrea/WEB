@@ -1,0 +1,451 @@
+@import url("fonts/segoe-wp-webfont/style.css");
+
+:root {
+  --old-acc: #000080;
+  --old-c: #c0c0c0;
+
+  --old-dark: #5f5f5f;
+}
+
+.winMode .windowApp {
+  border: 0.5px solid rgb(136, 142, 150);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  background-color: rgb(211, 211, 211);
+  backdrop-filter: none;
+}
+
+.winMode .windowApp > header,
+.winMode .lia-ctxmenu,
+.winMode .lia-menubar {
+  font-family: "Segoe WP";
+}
+
+.winMode
+  .wrapperApp:not(.wrapperApp.maximized):not(.wrapperApp.maximiX)
+  .windowApp {
+  border-radius: 12px;
+}
+
+/* .winMode
+  .wrapperApp:not(.wrapperApp.maximized):not(.wrapperApp.maximiX)
+  .windowApp
+  > header {
+  padding: 7px 14px;
+} */
+
+.winMode .windowApp > header {
+  gap: 9px;
+  /* font-size: 13px; */
+  padding: 7px 14px;
+  padding-left: 9px;
+  font-size: 13px;
+  font-weight: normal;
+  box-shadow: none !important;
+  border-bottom: 1px solid transparent;
+  /* background-color: transparent !important; */
+}
+
+.winMode .windowApp > header > h1 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}
+
+.winMode .windowApp > header * {
+  font-size: inherit;
+}
+
+.winMode .windowApp > header .x {
+  /* display: block !important; */
+  position: absolute;
+  right: -13.5px;
+  top: -7.5px;
+  width: 45px;
+  transition: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.windowApp > header .x {
+  /* display: inline-block !important; */
+}
+.maximiX > .windowApp header .x {
+  display: none !important;
+}
+
+.winMode .windowApp > header .x:hover {
+  background-color: rgb(179, 0, 0);
+}
+
+.winMode .windowApp > header .max {
+  display: none !important;
+}
+
+/* .winMode .windowApp > main * {
+  box-shadow: none !important;
+} */
+
+.winMode .lia-ctxmenu {
+  all: unset;
+  border-radius: 6px;
+  background-color: white;
+  padding: 2px 4px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  display: block;
+  position: absolute;
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  font-size: 12px;
+  /* animation: none !important; */
+  font-family: "Segoe WP";
+}
+
+.winMode .lia-ctxmenu .item {
+  all: unset;
+  display: block;
+  border-radius: 1.5px;
+  height: 20px;
+  margin: 1px;
+  padding: 0 25px;
+}
+
+.winMode .lia-ctxmenu .item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.winMode .lia-menubar {
+  height: 23px !important;
+  min-height: 23px !important;
+  font-size: 12px !important;
+  padding: 2px !important;
+  border: none !important;
+  border-radius: 2px !important;
+  color: black !important;
+  background-color: white !important;
+}
+
+.winMode .lia-menubar li:hover {
+  display: flex;
+  background-color: rgba(173, 216, 230, 0.445);
+  border-bottom: none !important;
+  border: 1px solid rgba(173, 216, 230, 0.767);
+}
+
+.winMode .lia-menubar li {
+  border-bottom: none !important;
+  color: black !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+  transition: none;
+  border: 1px solid transparent;
+}
+
+.winMode .lia-menubar li.active {
+  background-color: rgba(173, 216, 230, 0.767);
+  padding-top: 2px !important;
+  padding-left: 9px !important;
+  padding-right: 7px !important;
+  border: 1px solid rgb(173, 198, 230);
+}
+
+.winMode .lia-menubar .content {
+  all: unset;
+  border-radius: 3px;
+  background-color: white;
+  margin-top: -15px;
+  padding: 2px 4px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  display: block;
+  position: absolute;
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+}
+
+.winMode .lia-menubar .item {
+  all: unset;
+  display: block;
+  border-radius: 1.5px;
+  height: 20px;
+  margin: 1px;
+  padding: 0 25px;
+}
+
+.winMode .lia-menubar .content > * {
+  margin: 1px !important;
+  padding: 0 25px !important;
+}
+
+.winMode .lia-menubar .item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.winMode .lia-menubar ::-webkit-scrollbar {
+  all: unset;
+  width: 10px;
+  height: 10px;
+}
+.winMode .lia-menubar ::-webkit-scrollbar-track {
+  all: unset;
+}
+
+.winMode .lia-menubar ::-webkit-scrollbar-thumb {
+  box-shadow: unset;
+}
+
+.winMode .lia-menubar ::-webkit-scrollbar-button {
+  all: unset;
+}
+.winMode .lia-ctxmenu ::-webkit-scrollbar {
+  all: unset;
+  width: 10px;
+  height: 10px;
+}
+.winMode .lia-ctxmenu ::-webkit-scrollbar-track {
+  all: unset;
+}
+
+.winMode .lia-ctxmenu ::-webkit-scrollbar-thumb {
+  box-shadow: unset;
+}
+
+.winMode .lia-ctxmenu ::-webkit-scrollbar-button {
+  all: unset;
+}
+
+.old-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: var(--old-c);
+  border: 2px solid var(--old-acc);
+  border-radius: 4px;
+  font-family: "Segoe WP", sans-serif;
+  box-shadow: 2px 2px 5px #000000;
+  line-height: 1.4;
+  color: var(--ml-text);
+  font-size: 1.2rem;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+.old-container.clean {
+  margin: 0;
+  padding: 0;
+}
+
+.old-container h1,
+.old-container h2 {
+  color: var(--old-acc);
+  text-align: center;
+  font-family: "Segoe WP", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+
+.old-container p {
+  color: var(--ml-text);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.old-container .footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--old-acc);
+  margin-top: 30px;
+}
+
+.old-container button {
+  background-color: var(--old-acc);
+  color: var(--ml-white);
+  border: 2px solid var(--old-acc);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: "Segoe WP", sans-serif;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.old-container button:hover {
+  background-color: var(--old-dark);
+  border-color: var(--old-dark);
+}
+
+.old-container .title-bar {
+  background-color: var(--old-acc);
+  color: var(--ml-white);
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+  font-family: "Segoe WP", sans-serif;
+}
+
+.old-container .window-content {
+  background-color: var(--ml-white);
+  padding: 10px;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.old-container input {
+  background-color: var(--ml-white);
+  color: var(--ml-text);
+  border: 2px solid var(--old-acc);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-family: "Segoe WP", sans-serif;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.old-container input:focus {
+  border-color: var(--old-dark);
+  outline: var(--old-dark);
+}
+
+.old-container .styled-checkbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: "Segoe WP", sans-serif;
+}
+
+.old-container .styled-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.old-container .styled-checkbox span {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--ml-white);
+  border: 2px solid var(--old-acc);
+  border-radius: 4px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.old-container .styled-checkbox span::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--old-acc);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.old-container .styled-checkbox input[type="checkbox"]:checked + span {
+  background-color: var(--old-acc);
+}
+
+.old-container .styled-checkbox input[type="checkbox"]:checked + span::after {
+  opacity: 1;
+}
+
+.old-container .styled-checkbox input[type="checkbox"]:focus + span {
+  outline: 2px solid var(--old-dark);
+  outline-offset: 2px;
+}
+
+.old-container .styled-checkbox input[type="checkbox"]:hover + span {
+  border-color: var(--old-dark);
+}
+
+.old-container input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--old-acc);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+  background-color: var(--ml-white);
+  outline: 2px solid var(--old-dark);
+  outline-offset: 2px;
+}
+
+.old-container input[type="checkbox"]::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border-radius: 2px;
+  background-color: var(--old-dark);
+}
+
+.old-container input[type="checkbox"]:checked::after {
+  left: 14px;
+  background-color: var(--old-acc);
+}
+
+.noBackdrop {
+  backdrop-filter: unset !important;
+}
+
+.noBackdrop * {
+  backdrop-filter: unset !important;
+}
+
+.noBackdrop::before,
+.noBackdrop::after {
+  backdrop-filter: unset !important;
+}
+
+.noBackdrop *::before,
+.noBackdrop *::after {
+  backdrop-filter: unset !important;
+}
+
+.noBackdrop .windowApp {
+  background-color: rgba(196, 196, 196, 1);
+}
+
+.noBackdrop .taskBar {
+  background: rgba(124, 124, 124, 1);
+}
+
+.noBackdrop .lia-ctxmenu {
+  background-color: white;
+}
+
+.noShadow-r {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.noShadow-r * {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.noShadow-r::before,
+.noShadow-r::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.noShadow-r *::before,
+.noShadow-r *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}

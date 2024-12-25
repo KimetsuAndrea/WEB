@@ -1,0 +1,242 @@
+.flex-colcon {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.flex-colcon > * {
+  flex: 1;
+  overflow: auto;
+  height: 100%; 
+}
+
+.flex-colcon.minHalf > * {
+  min-width: 50%;
+}
+
+.flex-colcon.min200px > * {
+  min-width: 200px;
+}
+
+.flex-colcon.minThird > * {
+  min-width: 33.33%;
+}
+
+.flex-colcon.minQuarter > * {
+  min-width: 25%;
+}
+
+.flex-colcon.minFifth > * {
+  min-width: 20%;
+}
+
+.flex-colcon.autoMin {
+  --columns: 3;
+}
+
+.flex-colcon.autoMin > * {
+  min-width: calc(100% / var(--columns));
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.flex-space-around {
+  justify-content: space-around;
+}
+
+.flex-space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-align-start {
+  align-items: flex-start;
+}
+
+.flex-align-end {
+  align-items: flex-end;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-stretch > * {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-gap-small {
+  gap: 5px;
+}
+
+.flex-gap-medium {
+  gap: 15px;
+}
+
+.flex-gap-large {
+  gap: 30px;
+}
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  container-type: inline-size;
+}
+
+.flex-grid > * {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.flex-grid.col2 > * {
+  flex-basis: calc(100% / 2 - 10px);
+}
+
+.flex-grid.col3 > * {
+  flex-basis: calc(100% / 3 - 10px);
+}
+
+.flex-grid.col4 > * {
+  flex-basis: calc(100% / 4 - 10px);
+}
+
+.flex-grid.col5 > * {
+  flex-basis: calc(100% / 5 - 10px);
+}
+
+.flex-grid.autoGrid {
+  --columns: 3;
+}
+
+.flex-grid.autoGrid > * {
+  flex-basis: calc((100% / var(--columns)) - 10px);
+}
+
+.flex-grid > .span-full {
+  flex-basis: 100%;
+}
+
+.flex-grid.gap-small {
+  gap: 5px;
+}
+
+.flex-grid.gap-medium {
+  gap: 15px;
+}
+
+.flex-grid.gap-large {
+  gap: 30px;
+}
+
+@container (max-width: 768px) {
+  .flex-grid > * {
+    flex-basis: calc(100% - 10px);
+  }
+}
+
+.flex-list {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow-y: auto;
+  container-type: inline-size;
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+.flex-list > * {
+  flex: 1;
+  min-width: 260px;
+  height: auto;
+  overflow: auto;
+}
+
+.flex-list.minHalf > * {
+  flex-basis: calc(50% - 10px);
+}
+
+.flex-list.minThird > * {
+  flex-basis: calc(33.33% - 10px);
+}
+
+.flex-list.minQuarter > * {
+  flex-basis: calc(25% - 10px);
+}
+
+.flex-list.autoGrid {
+  --columns: 3;
+}
+
+.flex-list.autoGrid > * {
+  flex-basis: calc((100% / var(--columns)) - 10px);
+}
+
+.flex-list.fixed {
+  position: fixed;
+  height: calc(100% - 100px);
+  width: calc(100% - 20px);
+}
+
+@container (max-width: 768px) {
+  .flex-list > * {
+    flex-basis: 100%;
+  }
+}
+
+@container (min-width: 769px) and (max-width: 1024px) {
+  .flex-list > * {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+.flex-list.gap-small {
+  gap: 5px;
+}
+
+.flex-list.gap-medium {
+  gap: 15px;
+}
+
+.flex-list.gap-large {
+  gap: 30px;
+}
+
+.flex-list.scrollable {
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+}
